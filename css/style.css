@@ -58,17 +58,23 @@ body{
   font-size: 10px;
   line-height: 13px;
 }
+.header__top-link,
+.header__top-item{
+  transition: all .3s;
+}
+.header__top-link:hover,
+.header__top-item:hover{
+  transform: scale(1.2);
+}
 .header__top-list{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 23px 0;
 }
 .header__top-item--left{
   margin-right: auto;
-}
-.header__top-item span{
-  font-weight: 700;
 }
 .header__top-link--gift{
   position: relative;
@@ -122,6 +128,12 @@ body{
   line-height: 15px;
   color: #333333;
 }
+.header__btn{
+  transition: all .3s;
+}
+.header__btn:hover{
+  opacity: .6;
+}
 .btn{
   background: var(--color-primary) url(../img/magnifier.svg) no-repeat 50% 50%/16px 16px;
   border-radius: 0px 6px 6px 0px;
@@ -145,6 +157,7 @@ body{
 } 
 .user__img{
   border-radius: 50%;
+  overflow: hidden;
 }
 .user__link{
   position: relative;
@@ -399,6 +412,12 @@ body{
   position: relative;
   margin-bottom: 21px;
 }
+.packages__btn{
+  transition: all .3s;
+}
+.packages__btn:hover{
+  background-color: #a0011e;
+}
 .general-item::before{
   content: "";
   position: absolute;
@@ -545,6 +564,7 @@ body{
   margin-top: -45px;
   border-radius: 50%;
   margin-bottom: 9px;
+  overflow: hidden;
 }
 .reviews__name{
   font-weight: 700;
@@ -662,6 +682,10 @@ body{
   gap: 30px;
   color: #fff;
 }
+.activites__card{
+  border-radius: 6px;
+  overflow: hidden;
+}
 .activites__text{
   position: absolute;
   left: 26px;
@@ -699,6 +723,13 @@ body{
   line-height: 23px;
   color: #FFFFFF;
   margin-bottom: 10px;
+}
+.footer__link{
+  transition: all .3s;
+}
+.footer__link:hover{
+  opacity: .7;
+  text-decoration: underline;
 }
 .social-network{
   display: flex;
@@ -949,6 +980,9 @@ body{
   .header__top-list{
     width: 100%;
     margin-bottom: 15px;
+  }
+  .header__top-item--left{
+    text-align: center;
   }
 }
 @media (max-width:500px){
