@@ -704,6 +704,10 @@ body{
   padding: 7px 21px;
   background-color: var(--color-primary);
   border-radius: 4px;
+  transition: all .3s;
+}
+.activites__btn:hover{
+  background-color: #a0011e;
 }
 .footer{
   background-color: var(--bg-dark);
