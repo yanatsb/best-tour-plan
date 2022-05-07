@@ -119,7 +119,7 @@ body{
   padding: 40px 15px;
 }
 .form{
-  max-width: 350px;
+  width: 350px;
   height: 40px;
   background: #F5FAFE;
   border-radius: 6px 0 0 6px;
@@ -152,6 +152,7 @@ body{
 .header__basket{
   position: relative;
   transition: all .3s;
+  margin-right: 53px;
 }
 .header__basket-amount{
   position: absolute;
@@ -251,6 +252,15 @@ body{
 .breadcrums__list{
   display: flex;
   margin-bottom: 19px;
+}
+.slash::after{
+  content: '/';
+}
+.breadcrums__item{
+  transition: all .3s;
+}
+.breadcrums__item:hover{
+  text-decoration: underline;
 }
 .hotel-card__top{
   display: flex;
@@ -459,7 +469,7 @@ body{
 .package-summery-wrapper{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto auto;
   gap: 32px;
 }
 .package-summery__highlights-details{
@@ -912,12 +922,23 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .footer__policy-list{
   display: flex;
   margin-left: auto;
   margin-right: 278px;
   gap: 10px;
+}
+
+@media (max-width:1140px){
+  .form-name{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .form-tel{
+    width: 100%;
+  }
 }
 
 @media (max-width:1040px){
@@ -955,6 +976,9 @@ body{
 }
 
 @media (max-width:920px){
+  .header__basket svg path{
+    fill: var(--bg-light);
+  }
   .user__adaptive{
     display: flex;
     justify-content: center;
@@ -963,6 +987,9 @@ body{
   }
   .header__user{
     display: none;
+  }
+  .header__basket{
+    margin-right: 0;
   }
   .header__logo-img{
     display: none;
@@ -1048,15 +1075,19 @@ body{
   .footer__top{
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 50px;
+    gap: 40px;
   }
   .footer__logo{
     display: flex;
     flex-basis: 100%;
     justify-content: center;
-    margin-bottom: 30px;
   }
   .footer__list:not(:last-child){
     margin-right: 40px;
+  }
+  .footer__policy-list{
+    margin: 0;
   }
 }
 @media (max-width:800px){
@@ -1100,6 +1131,10 @@ body{
   .package-summery__highlights-details-main-wrapper{
     display: block;
   }
+  .footer__policy{
+    justify-content: center;
+    gap: 15px;
+  }
 }
 @media (max-width:500px){
   .hotel-card__top-title{
@@ -1136,5 +1171,9 @@ body{
   }
   .subscribe__form{
     max-width: 250px;
+  }
+  .footer__policy-list{
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
