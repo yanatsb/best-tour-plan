@@ -194,7 +194,7 @@ body{
   text-decoration: none;
   display: block;
 }
-.user__item:hover{
+.user__item a:hover{
   color: var(--color-primary);
 }
 .header__user:hover .user__menu{
@@ -1060,6 +1060,12 @@ body{
   .menu-btn.active span:nth-of-type(3) {
     top: 50%;
     transform: translate(-50%, 0%) rotate(-45deg); 
+  }
+  .header__nav-list{
+    display: none;
+  }
+  .header__nav.active .header__nav-list {
+    display: flex;
   }
   .package-summery__highlights-details-main-wrapper {
     grid-template-columns:  1fr 1fr;
